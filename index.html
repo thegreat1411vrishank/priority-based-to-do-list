@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task Records</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="ct">
+            <h2>Task Records</h2>
+            <label>Task: </label>
+            <input class="input" type="text" id="inp" placeholder="Task..." required>
+            <br>
+            <label>Priority: </label>
+            <select class="input" id="priority" required>
+                <option value="High" selected>High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <br>
+            <span onclick="addItem()" class="add">Add</span>
+            <br>
+            <div class="filterList">
+                <label>Filter: </label>
+                <span class="filter" id="all" onclick="sortList('all')">ALL</span>
+                <span class="filter" id="Low" onclick="sortList('Low')">LOW</span>
+                <span class="filter" id="Medium" onclick="sortList('Medium')">MEDIUM</span>
+                <span class="filter" id="High" onclick="sortList('High')">HIGH</span>
+            </div>
+            <div class="info"><label>Displayed tasks: <span id="inf">0</span></label></div>
+            
+        </header>
+        <div class="scr">
+            <ul id="todos" >
+                <li>Add a new Task! To complete the tasks just click on them. Edit them in the popup window. </li>
+            </ul>
+        </div>
+        
+
+        <script src="script.js"></script>
+    </body>
+</html>
